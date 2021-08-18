@@ -1,5 +1,6 @@
 package com.peilchen.springframework.beans.factory.xml;
 
+import cn.hutool.core.io.IoUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.core.util.XmlUtil;
 import com.peilchen.springframework.beans.PropertyValue;
@@ -9,11 +10,15 @@ import com.peilchen.springframework.beans.support.AbstractBeanDefinitionReader;
 import com.peilchen.springframework.beans.support.BeanDefinitionRegistry;
 import com.peilchen.springframework.core.io.Resource;
 import com.peilchen.springframework.core.io.ResourceLoader;
+import com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl;
 import org.springframework.beans.BeansException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -25,7 +30,6 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
     public XmlBeanDefinitionReader(BeanDefinitionRegistry registry, ResourceLoader resourceLoader) {
         super(registry, resourceLoader);
     }
-
 
     @Override
     public void loadBeanDefinitions(String location) throws BeansException {
@@ -58,19 +62,15 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
         NodeList childNodes = root.getChildNodes();
 
         for (int i = 0; i < childNodes.getLength(); i++) {
-            if (!(childNodes.item(i) instanceof Element)) {
-                continue;
-            }
-
-            if (!"bean".equals(childNodes.item(i).getChildNodes())) {
-                continue;
-            }
+            // 判断元素
+            if (!(childNodes.item(i) instanceof Element)) continue;
+            // 判断对象
+            if (!"bean".equals(childNodes.item(i).getNodeName())) continue;
 
             Element bean = (Element) childNodes.item(i);
             String id = bean.getAttribute("id");
             String name = bean.getAttribute("name");
             String className = bean.getAttribute("class");
-
             // 获取 Class，方便获取类中的名称
             Class<?> clazz = Class.forName(className);
             // 优先级 id > name

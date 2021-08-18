@@ -1,5 +1,6 @@
 package com.peilchen.springframework.beans.support;
 
+import com.peilchen.springframework.core.io.DefaultResourceLoader;
 import com.peilchen.springframework.core.io.ResourceLoader;
 
 public abstract class AbstractBeanDefinitionReader implements BeanDefinitionReader{
@@ -9,7 +10,7 @@ public abstract class AbstractBeanDefinitionReader implements BeanDefinitionRead
     private ResourceLoader resourceLoader;
 
     public AbstractBeanDefinitionReader(BeanDefinitionRegistry registry) {
-        this.registry = registry;
+        this(registry, new DefaultResourceLoader());
     }
 
     public AbstractBeanDefinitionReader(BeanDefinitionRegistry registry, ResourceLoader resourceLoader) {
