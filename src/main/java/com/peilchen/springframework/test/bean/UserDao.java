@@ -1,4 +1,4 @@
-package com.peilchen.springframework.test;
+package com.peilchen.springframework.test.bean;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,10 +1,12 @@
 package com.peilchen.springframework.test;
 
-import com.peilchen.springframework.bean.PropertyValue;
-import com.peilchen.springframework.bean.PropertyValues;
-import com.peilchen.springframework.bean.factory.BeanDefinition;
-import com.peilchen.springframework.bean.factory.BeanReference;
-import com.peilchen.springframework.bean.support.DefaultListableBeanFactory;
+import com.peilchen.springframework.beans.PropertyValue;
+import com.peilchen.springframework.beans.PropertyValues;
+import com.peilchen.springframework.beans.factory.BeanDefinition;
+import com.peilchen.springframework.beans.factory.BeanReference;
+import com.peilchen.springframework.beans.support.DefaultListableBeanFactory;
+import com.peilchen.springframework.test.bean.UserDao;
+import com.peilchen.springframework.test.bean.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class SpringRun {

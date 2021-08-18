@@ -1,6 +1,6 @@
-package com.peilchen.springframework.bean.factory;
+package com.peilchen.springframework.beans.factory;
 
-import com.peilchen.springframework.bean.PropertyValues;
+import com.peilchen.springframework.beans.PropertyValues;
 
 public class BeanDefinition {
 

@@ -1,10 +1,10 @@
-package com.peilchen.springframework.bean.support;
+package com.peilchen.springframework.beans.support;
 
 import cn.hutool.core.bean.BeanUtil;
-import com.peilchen.springframework.bean.PropertyValue;
-import com.peilchen.springframework.bean.PropertyValues;
-import com.peilchen.springframework.bean.factory.BeanDefinition;
-import com.peilchen.springframework.bean.factory.BeanReference;
+import com.peilchen.springframework.beans.PropertyValue;
+import com.peilchen.springframework.beans.PropertyValues;
+import com.peilchen.springframework.beans.factory.BeanDefinition;
+import com.peilchen.springframework.beans.factory.BeanReference;
 import org.springframework.beans.BeansException;
 
 import java.lang.reflect.Constructor;

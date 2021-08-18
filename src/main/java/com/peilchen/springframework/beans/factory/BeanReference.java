@@ -1,4 +1,4 @@
-package com.peilchen.springframework.bean.factory;
+package com.peilchen.springframework.beans.factory;
 
 public class BeanReference {
 

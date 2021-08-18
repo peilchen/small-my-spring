@@ -1,4 +1,4 @@
-package com.peilchen.springframework.bean;
+package com.peilchen.springframework.beans;
 
 public class PropertyValue {
     private final String name;

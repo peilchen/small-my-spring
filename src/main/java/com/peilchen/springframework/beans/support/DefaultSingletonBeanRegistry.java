@@ -1,6 +1,6 @@
-package com.peilchen.springframework.bean.support;
+package com.peilchen.springframework.beans.support;
 
-import com.peilchen.springframework.bean.factory.SingletonBeanRegistry;
+import com.peilchen.springframework.beans.factory.SingletonBeanRegistry;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,5 +1,6 @@
 package com.peilchen.springframework.core.io;
 
+import com.peilchen.springframework.utils.ClassUtils;
 import org.springframework.util.Assert;
 
 import java.io.FileNotFoundException;
@@ -7,7 +8,9 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class ClassPathResource implements Resource {
+
     private final String path;
+
     private ClassLoader classLoader;
 
     public ClassPathResource(String path) {
@@ -17,7 +20,7 @@ public class ClassPathResource implements Resource {
     public ClassPathResource(String path, ClassLoader classLoader) {
         Assert.notNull(path, "Path must not be null");
         this.path = path;
-        this.classLoader = classLoader;
+        this.classLoader = (classLoader != null ? classLoader : ClassUtils.getDefaultClassLoader());
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.peilchen.springframework.bean;
+package com.peilchen.springframework.beans;
 
 import java.util.ArrayList;
 import java.util.List;

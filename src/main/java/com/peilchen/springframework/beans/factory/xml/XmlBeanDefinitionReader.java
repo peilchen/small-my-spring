@@ -1,12 +1,12 @@
-package com.peilchen.springframework.bean.factory.xml;
+package com.peilchen.springframework.beans.factory.xml;
 
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.core.util.XmlUtil;
-import com.peilchen.springframework.bean.PropertyValue;
-import com.peilchen.springframework.bean.factory.BeanDefinition;
-import com.peilchen.springframework.bean.factory.BeanReference;
-import com.peilchen.springframework.bean.support.AbstractBeanDefinitionReader;
-import com.peilchen.springframework.bean.support.BeanDefinitionRegistry;
+import com.peilchen.springframework.beans.PropertyValue;
+import com.peilchen.springframework.beans.factory.BeanDefinition;
+import com.peilchen.springframework.beans.factory.BeanReference;
+import com.peilchen.springframework.beans.support.AbstractBeanDefinitionReader;
+import com.peilchen.springframework.beans.support.BeanDefinitionRegistry;
 import com.peilchen.springframework.core.io.Resource;
 import com.peilchen.springframework.core.io.ResourceLoader;
 import org.springframework.beans.BeansException;

@@ -1,6 +1,6 @@
-package com.peilchen.springframework.bean.support;
+package com.peilchen.springframework.beans.support;
 
-import com.peilchen.springframework.bean.factory.BeanDefinition;
+import com.peilchen.springframework.beans.factory.BeanDefinition;
 import org.springframework.beans.BeansException;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.NoOp;
