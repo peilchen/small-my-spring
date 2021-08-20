@@ -1,4 +1,4 @@
-package com.peilchen.springframework.beans;
+package com.peilchen.springframework.beans.factory;
 
 import org.springframework.beans.BeansException;
 

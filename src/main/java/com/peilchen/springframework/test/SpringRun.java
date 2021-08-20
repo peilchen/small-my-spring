@@ -20,16 +20,17 @@ public class SpringRun {
         this.runName = runName;
     }
 
-    public static void main1(String[] args) {
-        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
-        applicationContext.register(SpringRun.class);
+    public static void main(String[] args) {
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext("com.peilchen.springframework.test");
+        UserService userService = (UserService) applicationContext.getBean("userService");
+        userService.queryUserInfo();
     }
 
     public void queryUserInfo() {
         System.out.println("query user info..." + runName);
     }
 
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         // 1. 初始化 BeanFactory
         DefaultListableBeanFactory listableBeanFactory = new DefaultListableBeanFactory();
 

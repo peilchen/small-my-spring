@@ -5,6 +5,9 @@ import org.springframework.util.Assert;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+/**
+ * 其实这个是一个工厂模式
+ */
 public class DefaultResourceLoader implements ResourceLoader {
     @Override
     public Resource getResource(String location) {
